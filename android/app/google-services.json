@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "275105857136",
+    "firebase_url": "https://time-tracker-flutter-80650.firebaseio.com",
+    "project_id": "time-tracker-flutter-80650",
+    "storage_bucket": "time-tracker-flutter-80650.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275105857136:android:0c442202fe6eb65df6feb5",
+        "android_client_info": {
+          "package_name": "com.konsistentapps.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275105857136-jh2bnnc52jp7ctc1rmmu33tpac9chtu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqvn6qDbLgzIiZ2rXNjZFqCzvsrd9XwvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275105857136-jh2bnnc52jp7ctc1rmmu33tpac9chtu4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275105857136:android:183464d9999fef42f6feb5",
+        "android_client_info": {
+          "package_name": "com.konsistentapps.time_tracker_02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275105857136-dphdg0bhlv7d7p7lthh6qfnulf7fj0rk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.konsistentapps.time_tracker_02",
+            "certificate_hash": "4779a27f51c595de233989f1cb41e71a08ba8746"
+          }
+        },
+        {
+          "client_id": "275105857136-jh2bnnc52jp7ctc1rmmu33tpac9chtu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqvn6qDbLgzIiZ2rXNjZFqCzvsrd9XwvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275105857136-jh2bnnc52jp7ctc1rmmu33tpac9chtu4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
