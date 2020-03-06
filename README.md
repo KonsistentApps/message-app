@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # chat_app
 
 A chat application.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# message-app
+A messaging app for android and iOs with use of Firebase
+>>>>>>> 90dedd90d3cadfa4f2cee65b6b44d9b22442bd44
