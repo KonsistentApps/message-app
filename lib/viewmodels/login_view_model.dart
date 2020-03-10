@@ -36,10 +36,6 @@ class LoginViewModel extends BaseModel {
               title: Text("Login Failure"),
               content: Text("General login failure. Please try again later"),
             ));
-       /* await _dialogService.showDialog(
-          title: 'Login Failure',
-          description: 'General login failure. Please try again later',
-        );*/
       }
     } else {
       showDialog(
@@ -48,10 +44,6 @@ class LoginViewModel extends BaseModel {
             title: Text("\nLogin Failure\n"),
             content: Text(result),
           ));
-      /*await _dialogService.showDialog(
-        title: '\nLogin Failure\n',
-        description: result,
-      );*/
     }
   }
 

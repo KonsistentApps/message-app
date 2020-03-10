@@ -10,17 +10,6 @@ class BaseModel extends ChangeNotifier {
       locator<AuthenticationService>();
 
   User get currentUser => _authenticationService.currentUser;
-
-
- /* Map<String, dynamic> _messagesViewModelData = _messagesViewModelData == null ? {"la": "la"} : _messagesViewModelData;
-  Map<String, dynamic> get messagesViewModelData => _messagesViewModelData;
-
-  void setMessagesViewModelData(Map<String, dynamic> data) {
-    _messagesViewModelData = data;
-    notifyListeners();
-  }*/
-
-
   bool _busy = false;
   bool get busy => _busy;
 

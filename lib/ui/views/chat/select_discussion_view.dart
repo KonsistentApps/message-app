@@ -40,13 +40,6 @@ class SelectDiscussionView extends StatelessWidget {
                   ),
           ),
         );
-
-        /*ListView.builder(
-            itemCount: 3,
-            itemBuilder: (context, index) => ListTile(
-                title: Text(
-                  "Invite other people to join",
-                )));*/
       },
     );
   }

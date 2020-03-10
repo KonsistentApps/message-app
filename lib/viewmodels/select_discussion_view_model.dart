@@ -10,7 +10,7 @@ import '../locator.dart';
 import 'base_model.dart';
 
 class SelectDiscussionViewModel extends BaseModel {
-  final FirestoreService _fireStoreService = locator<FirestoreService>();
+  final FireStoreService _fireStoreService = locator<FireStoreService>();
   final AuthenticationService _authenticationService =
       locator<AuthenticationService>();
   final DialogService _dialogService = locator<DialogService>();
