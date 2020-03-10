@@ -7,7 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
-class FirestoreService {
+class FireStoreService {
   final CollectionReference _usersCollectionReference =
       Firestore.instance.collection('users');
 
@@ -17,19 +17,16 @@ class FirestoreService {
   final StreamController<List<Message>> _messagesListController =
       StreamController<List<Message>>.broadcast();
 
-  final StreamController<String> _userConversationNameController = StreamController<String>.broadcast();
-
+  final StreamController<String> _userConversationNameController =
+      StreamController<String>.broadcast();
 
   String documentIdFromCurrentDate() => DateTime.now().toIso8601String();
-
-
 
   String _documentID;
 
   String get docId => _documentID;
 
-
-  Stream getInterlocutor({String name}){
+  Stream getInterlocutor({String name}) {
     _userConversationNameController.add(name);
     return _userConversationNameController.stream;
   }
@@ -47,12 +44,10 @@ class FirestoreService {
             .map((snapshot) => Message.fromMap(snapshot.data))
             .toList();
         _messagesListController.add(messageList);
-      } else {
-      }
+      } else {}
     });
     return _messagesListController.stream;
   }
-
 
   Future continueOrStartDiscussionWithUser(
       {@required String userId, @required String currentUserId}) async {
@@ -79,8 +74,6 @@ class FirestoreService {
         }
       }
       if (discussionId != 'false') {
-
-
         return {'discussionId': discussionId};
       } else {
         discussionId =
@@ -110,7 +103,6 @@ class FirestoreService {
                 .get()
                 .then((userData) {
               existingOtherUserData = userData.data;
-
             });
             existingOtherUserData['discussions']
                 .add({'discussionId': discussionId, 'userId': currentUserId});
@@ -152,10 +144,6 @@ class FirestoreService {
         "timestamp": documentIdFromCurrentDate()
       });
       return true;
-      /*await _messageCollectionReference.add({
-        "text": messageText,
-        "from": BaseModel().currentUser.email,
-      });*/
     } catch (e) {
       if (e is PlatformException) {
         return e.message;
@@ -203,7 +191,4 @@ class FirestoreService {
       return e.toString();
     }
   }
-
-
-
 }

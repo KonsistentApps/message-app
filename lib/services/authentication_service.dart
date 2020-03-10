@@ -9,13 +9,12 @@ import '../locator.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  final FirestoreService _firestoreService = locator<FirestoreService>();
+  final FireStoreService _fireStoreService = locator<FireStoreService>();
 
   final StreamController<User> _connectedUserController =
       StreamController<User>.broadcast();
 
   User _currentUser = User();
-
   User get currentUser => _currentUser;
 
   Stream listenToConnectedUser() {
@@ -31,7 +30,7 @@ class AuthenticationService {
 
   Future _populateCurrentUser(FirebaseUser user) async {
     if (user != null) {
-      _currentUser = await _firestoreService.getUser(user.uid);
+      _currentUser = await _fireStoreService.getUser(user.uid);
       listenToConnectedUser();
     } else {
       _currentUser = null;
@@ -79,7 +78,7 @@ class AuthenticationService {
             {'test': 'test'}
           ]);
 
-      await _firestoreService.createUser(_currentUser);
+      await _fireStoreService.createUser(_currentUser);
       await _populateCurrentUser(_authResult.user);
 
       return _authResult.user != null;

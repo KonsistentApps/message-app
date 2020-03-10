@@ -12,7 +12,7 @@ import '../locator.dart';
 import 'base_model.dart';
 
 class MessagesViewModel extends BaseModel {
-  final FirestoreService _fireStoreService = locator<FirestoreService>();
+  final FireStoreService _fireStoreService = locator<FireStoreService>();
 
   List<Message> _messages;
 
@@ -55,7 +55,6 @@ class MessagesViewModel extends BaseModel {
         _messages = upDatedMessageList;
 
         notifyListeners();
-
       }
       setBusy(false);
     });
@@ -73,12 +72,6 @@ class MessagesViewModel extends BaseModel {
       var addedMessage = await _fireStoreService.addMessage(
           messageText: messageText, documentId: _fireStoreService.docId);
       messageController.clear();
-   /*   scrollController.animateTo(
-        //scrollController.position.maxScrollExtent,
-        0.0,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeOut,
-      );*/
       setBusy(false);
 
       if (addedMessage is String) {

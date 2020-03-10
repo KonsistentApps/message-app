@@ -109,9 +109,5 @@ class _MessagesViewState extends State<MessagesView> {
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }
 

@@ -3,7 +3,6 @@ import 'package:chat_app/services/navigation_service.dart';
 import 'package:chat_app/ui/views/startup_view.dart';
 import 'package:flutter/material.dart';
 
-import 'constants/route_names.dart';
 import 'locator.dart';
 
 void main() {
@@ -25,9 +24,6 @@ class MyApp extends StatelessWidget {
       navigatorKey: locator<NavigationService>().navigationKey,
       onGenerateRoute: generateRoute,
       home: StartUpView(),
-      /*builder: (context, child) => MainLayout(
-        child: child,
-      ),*/
     );
   }
 }
